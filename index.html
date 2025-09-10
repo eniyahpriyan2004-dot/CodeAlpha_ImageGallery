@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>IMAGE GALLERY</h1>
+
+    <div class="filter-buttons">
+        <button onclick="filterImages('all')">ALL</button>
+        <button onclick="filterImages('nature')">NATURE</button>
+        <button onclick="filterImages('animals')">ANIMALS</button>
+    </div>
+
+    <div class="gallery">
+        <img src="nature.jpg" data-category="nature" alt="Nature 1" onclick="openLightbox(this)">
+        <img src="animal.avif" data-category="animals" alt="Animal 1" onclick="openLightbox(this)">
+        <img src="nature.jpg" data-category="nature" alt="Nature 2" onclick="openLightbox(this)">
+        <img src="animal.avif" data-category="animals" alt="Animal 2" onclick="openLightbox(this)">
+        <img src="nature.jpg" data-category="nature" alt="Nature 3" onclick="openLightbox(this)">
+        <img src="animal.avif" data-category="animals" alt="Animal 3" onclick="openLightbox(this)">
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image" />
+        <div class="navigation">
+            <button onclick="prevImage()">&#10094; Prev</button>
+            <button onclick="nextImage()">Next &#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
